@@ -283,10 +283,6 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
       setIgnoreScrollEvent(true);
     };
 
-    // subscribe if scroll is necessary
-    wrapperRef.current?.addEventListener("wheel", handleWheel, {
-      passive: false,
-    });
     return () => {
       wrapperRef.current?.removeEventListener("wheel", handleWheel);
     };
